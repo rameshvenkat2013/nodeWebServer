@@ -45,6 +45,14 @@ app.get('/about', (req, res) => {
 });
 
 
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        pagetitle : 'As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection the callback is fired, but if there is no work to be done, Node will sleep.'
+    })
+});
+
+
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage : 'Unable to process the request'
