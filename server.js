@@ -14,12 +14,9 @@ app.use((req,res,next) => {
     var now = new Date().toString();
     log ='Now the time is : ' + now + ' - ' + req.url + ' - ' + req.method;
     console.log(log);
-    fs.appendFile('server22.log', log + '\n', (err) => {
+    fs.appendFile('server.log', log + '\n', (err) => {
         if(err){
             console.log('unable to write to server.log');
-        }else{
-            console.log('inside else');
-            next();
         }
     });
     //fs.writeFileSync('timestamp.hbs', 'Now the time is : ' , now , ' - ' , req.url , ' - ' , req.method);
