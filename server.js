@@ -18,6 +18,7 @@ app.use((req,res,next) => {
         if(err){
             console.log('unable to write to server.log');
         }
+        next();
     });
     //fs.writeFileSync('timestamp.hbs', 'Now the time is : ' , now , ' - ' , req.url , ' - ' , req.method);
     
